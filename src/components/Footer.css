@@ -2,6 +2,17 @@
   background: var(--bg-secondary);
   border-top: 1px solid var(--border);
   margin-top: auto;
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
 }
 
 .footer-container {
@@ -26,6 +37,7 @@
 .footer-logo .logo-icon {
   color: var(--primary);
   font-size: 1.5rem;
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
 }
 
 .footer-desc {
@@ -45,6 +57,18 @@
   font-weight: 600;
   color: var(--text);
   margin-bottom: 16px;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-section h4::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
 }
 
 .footer-section a {
@@ -52,11 +76,13 @@
   color: var(--text-light);
   font-size: 0.9rem;
   margin-bottom: 10px;
-  transition: color 0.2s;
+  transition: all 0.2s;
 }
 
 .footer-section a:hover {
   color: var(--primary);
+  padding-left: 4px;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
 }
 
 .footer-bottom {
